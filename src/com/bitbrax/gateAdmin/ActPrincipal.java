@@ -94,7 +94,7 @@ public class ActPrincipal extends Activity
 			              guest.setUid(bytearray2int(msg.getData().getByteArray("Uid")));
 			              Ds.InsertGuestIfNot(guest);
 			              
-			              edName.setText(guest.getName() + "ID Banco: " + Ds.GetGuestByUid(guest.getUid()).getId());
+			              edName.setText(guest.getName());
 			              
 		            break;
 	    	  		case Controller.OP_ENTRY:
