@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF" 
+    tools:context="com.bitbrax.gateAdmin.MainAct" >
+                
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:gravity="center_horizontal"
+        android:textColor="#F00"
+        android:text="Personalizador"
+        android:textSize="40sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="48dp"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/rbRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:checked="true"
+            android:text="Ler"
+            android:textColor="#FF0000"
+            android:textSize="40sp" 
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/rbPerso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="Personalizar"
+            android:textColor="#FF0000"
+            android:textSize="40sp" 
+            android:onClick="onRadioButtonClicked"/>
+       
+       <RadioButton
+            android:id="@+id/rbClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="Gravar"
+            android:textColor="#FF0000"
+            android:textSize="40sp" 
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radioGroup1"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/contactless" />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chkEntries"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="83dp"
+        android:ems="10"
+        android:textColor="#000"
+        android:hint="Nome"
+        android:enabled="true" />
+
+    <EditText
+        android:id="@+id/edtDateTimeEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtName"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_below="@+id/edtName"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:textColor="#000"
+        android:hint="Data/Hora Entrada"
+        android:inputType="datetime" 
+        android:enabled="true"/>
+
+    <CheckBox
+        android:id="@+id/chkEntries"
+        android:enabled="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/edtDateTimeEntry"
+        android:layout_marginTop="57dp"
+        android:text="Multiplas Entradas"
+        android:textColor="#FF0000"
+        android:textSize="25sp" />
+
+    <CheckBox
+        android:id="@+id/chkSlipper"
+        android:enabled="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chkEntries"
+        android:layout_below="@+id/chkEntries"
+        android:textColor="#FF0000"
+        android:text="Multiplos Chinelos"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textColor="#F00"
+        android:textSize="50px"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+
